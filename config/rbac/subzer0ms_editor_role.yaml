@@ -1,0 +1,31 @@
+# permissions for end users to edit subzer0ms.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: subzer0ms-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: subzero-controller
+    app.kubernetes.io/part-of: subzero-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: subzer0ms-editor-role
+rules:
+- apiGroups:
+  - ship.subzer0ms.com
+  resources:
+  - subzer0ms
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ship.subzer0ms.com
+  resources:
+  - subzer0ms/status
+  verbs:
+  - get

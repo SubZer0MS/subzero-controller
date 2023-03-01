@@ -1,0 +1,14 @@
+apiVersion: ship.subzer0ms.com/v1beta1
+kind: SubZer0MS
+metadata:
+  labels:
+    app.kubernetes.io/name: subzer0ms
+    app.kubernetes.io/instance: subzer0ms-sample
+    app.kubernetes.io/part-of: subzero-controller
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: subzero-controller
+  name: subzer0ms-sample
+spec:
+  # Add fields here
+  expression: "2*21"
+
